@@ -15,7 +15,6 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "~1.2.26",
-    "angular-input-date": "~1.0.4"
+    "angular": "~1.2.26"
   }
 }
