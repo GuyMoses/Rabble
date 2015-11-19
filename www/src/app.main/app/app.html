@@ -1,17 +1,44 @@
 <div class="main" ng-controller="AppCtrl as ctrl">
   <div class="main-image-div">
-    <!-- <div class="">
-      <div class="" style="position: absolute; font-size: 100px; z-index: 1000; color: #444; line-height: 481px; margin-left: 40%;">
-        Rabbel
-      </div>
-      <div class="">
-        <img class="main-image" width="100%" src="src/app.assets/img/market.jpg"/>
-      </div>
-    </div> -->
   </div>
   <div class="titles">
     <div class="main-info">
       Rabble creates connections between farmers and consumers
+    </div>
+  </div>
+  <div class="ourPick">
+    <div class="popular-head">
+      <div class="popular-headline picked-headline">
+        Our pick
+      </div>
+      <div class="picked-item" ng-click="ctrl.GoTo('product/5')">
+        <div class="picked-image">
+          <img class="picked-item-image" width="370px;" src="http://www.smoketheweed.com/wp-content/uploads/2015/09/weed-wallpaper-65.jpg"/>
+        </div>
+        <div class="picked-body">
+          <div class="picked-title">
+            David's weed
+          </div>
+          <div class="picked-subtitle">
+            David Kaplan
+          </div>
+          <div class="picked-description">
+            The Kind of weed you need
+          </div>
+          <div class="meter" style="width: 100%; margin-bottom: 0%; padding-bottom: 0%; clear: both;">
+            <span style="width: 80%;"></span>
+          </div>
+          <div class="" style="float: right;">
+            80%
+          </div>
+          <div class="picked-price" style="margin-top: 8%; color: #555;">
+            25$
+          </div>
+          <div class="picked-date" style="float: right; color: #444;">
+            3 days to go!
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="popular">
@@ -24,35 +51,35 @@
       </div>
     </div>
     <div class="popular-items">
-      <div class="popular-item">
+      <div class="popular-item" ng-click="ctrl.GoTo('product/5')">
         <div class="pop-item-image">
-          <img class="pop-item-image" height="200px;" src="http://lg.220-electronics.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/2/2/220-volt-kitchenaid-artisan-stand-mixer-pistachio.jpg"/>
+          <img class="pop-item-image" width="300px;" src="http://goodlifegarden.ucdavis.edu/blog/wp-content/uploads/2011/07/bell-peppers.jpg"/>
         </div>
         <div class="pop-item-middle">
-          <div class="pop-item-title">Kitchen aid</div>
-          <div class="pop-item-subtitle">Guy Moses</div>
+          <div class="pop-item-title">Bil's Pepers</div>
+          <div class="pop-item-subtitle">Bil Cosby</div>
           <div class="pop-item-description">
-            Kitchen aid lets you mix stuff in the kitchen, it's quite good.
+            Comes in all colors and flavors
           </div>
         </div>
         <div class="pop-item-bottom">
           <div class="meter">
-            <span style="width: 70%"></span>
-            <div class="meter-precentage">70%</div>
+            <span style="width: 60%"></span>
+            <div class="meter-precentage">60%</div>
           </div>
-          <div class="pop-item-price">150$</div>
-          <div class="pop-item-date">5 days to go</div>
+          <div class="pop-item-price">3$</div>
+          <div class="pop-item-date">2 days to go</div>
         </div>
       </div>
-      <div class="popular-item">
+      <div class="popular-item" ng-click="ctrl.GoTo('product/5')">
         <div class="pop-item-image">
-          <img class="pop-item-image" height="200px;" src="http://www.bac.org.il/content/sites/default/files/images/milky_shokolad446x302.jpg"/>
+          <img class="pop-item-image" width="300px;" src="http://cdn.theatlantic.com/assets/media/img/mt/2015/05/shutterstock_247399801/lead_960.jpg?1430622300"/>
         </div>
         <div class="pop-item-middle">
-          <div class="pop-item-title">Milki</div>
+          <div class="pop-item-title">Guy's Onions</div>
           <div class="pop-item-subtitle">Guy Moses</div>
           <div class="pop-item-description">
-            Probably the most important thing in your mornings.
+            Purple as much as you like them.
           </div>
         </div>
         <div class="pop-item-bottom">
@@ -64,13 +91,13 @@
           <div class="pop-item-date">2 days to go</div>
         </div>
       </div>
-      <div class="popular-item">
+      <div class="popular-item" ng-click="ctrl.GoTo('product/5')">
         <div class="pop-item-image">
-          <img class="pop-item-image" height="200px;" src="https://addons.opera.com/media/image-cache/themes/55/68255/1.0-rev1/images/03051a30-adfe-4be6-9964-4e7332476113_details_big.jpe"/>
+          <img class="pop-item-image" width="300px;" src="https://addons.opera.com/media/image-cache/themes/55/68255/1.0-rev1/images/03051a30-adfe-4be6-9964-4e7332476113_details_big.jpe"/>
         </div>
         <div class="pop-item-middle">
-          <div class="pop-item-title">10 Kilo of Strawberries</div>
-          <div class="pop-item-subtitle">Guy Moses</div>
+          <div class="pop-item-title">Ido's Strawberries</div>
+          <div class="pop-item-subtitle">Ido Ben-natan</div>
           <div class="pop-item-description">
             Strayberries seems to be the the worls favorate fruit.
           </div>
@@ -80,7 +107,7 @@
             <span style="width: 78%"></span>
             <div class="meter-precentage">78%</div>
           </div>
-          <div class="pop-item-price">3$ each K</div>
+          <div class="pop-item-price">3$</div>
           <div class="pop-item-date">4 days to go</div>
         </div>
       </div>

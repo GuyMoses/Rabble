@@ -82,13 +82,14 @@ body
 {
   float: right;
   overflow: auto;
-  padding: 18px;
+  padding: 12px;
+  margin-top: 0.8%;
 }
 
 .nav-bar-login-item
 {
   display: inline;
-  padding: 16px;
+  padding: 12px;
   color: #4780A2;
 }
 
@@ -138,4 +139,9 @@ body
   font-size: 16px;
   border: none;
   color: #444;
+}
+
+.nav-user-bar
+{
+  cursor: pointer;
 }
