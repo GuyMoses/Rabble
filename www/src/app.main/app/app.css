@@ -193,6 +193,11 @@
   padding-top: 3%;
 }
 
+.picked-item:hover
+{
+  cursor: pointer;
+}
+
 .picked-headline
 {
   clear:both;
