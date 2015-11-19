@@ -1,0 +1,142 @@
+body
+{
+    margin: 0px;
+    font-family: "proxima-nova", "Helvetica Neue", helvetica, sans-serif;
+}
+
+.main-view
+{
+  margin-top: 5%;
+}
+
+.nav-bar
+{
+  top: 0;
+  border-bottom: 1.5px solid #DBDBDB;
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px 1px #EFEFEF;
+  z-index: 10000;
+}
+
+.nav-bar-logo
+{
+  font-size: 28px;
+  float: left;
+  padding-left: 20px;
+  padding-top: 10px;
+  margin-right: 5%;
+}
+
+.nav-bar-logo:hover
+{
+  cursor: pointer;
+}
+
+.nav-bar-items
+{
+  float: left;
+  overflow: auto;
+  padding: 20px;
+  margin-top: 2px;
+  border-right: 1px solid #DBDBDB;
+}
+
+.nav-bar-item
+{
+  display: inline;
+  padding: 20px;
+  font-size: 16px;
+  color: #666;
+}
+
+.nav-bar-item:hover
+{
+  transition: 0.1s all linear;
+  color: #7613B1;
+  background-color: rgba(206, 130, 238, 0.10);
+  cursor: pointer;
+}
+
+.nav-bar-search
+{
+  float: left;
+  overflow: auto;
+  padding: 15px;
+}
+
+.nav-bar-search-item
+{
+  display: inline;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #555;
+}
+
+.empty-input.nav-bar-search-item
+{
+  min-width: 400px;
+}
+
+.nav-bar-login
+{
+  float: right;
+  overflow: auto;
+  padding: 18px;
+}
+
+.nav-bar-login-item
+{
+  display: inline;
+  padding: 16px;
+  color: #00a0ff;
+}
+
+.nav-bar-login-item:hover
+{
+  transition: 0.2s all linear;
+  cursor: pointer;
+  color: #666;
+}
+
+.login-popover
+{
+  position: absolute;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #BDBDBD;
+  right: 20px;
+  background: #FFF;
+}
+
+.login-item
+{
+  float: left;
+  vertical-align: middle;
+}
+
+.facebook-icon
+{
+  line-height: 75px;
+}
+
+.fa-facebook-official:hover
+{
+  transition: 0.2s all ease;
+  color: #353688;
+  cursor: pointer;
+}
+
+.login-container
+{
+  padding: 10px;
+}
+
+.login-container>input
+{
+  font-size: 16px;
+  border: none;
+  color: #444;
+}

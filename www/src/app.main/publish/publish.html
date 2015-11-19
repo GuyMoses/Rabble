@@ -1,0 +1,30 @@
+<div class="main" ng-controller="PublishCtrl as ctrl">
+  <div class="">
+  </div>
+   <div class="main-content">
+     <div class="published-item">
+       <div class="publish-item-container">
+         <input class="publish-image-input" type="file" ng-file-select="ctrl.onFileSelect(ctrl.$files)" >
+         <img class="publish-item-image" height="350px;" ng-src="{{product.imageSrc}}" type="file" ng-file-select="ctrl.onFileSelect(ctrl.$files)"/>
+       </div>
+       <div class="pop-item-middle">
+         <input ng-model="product.title" class="publish-item-title empty-input" placeholder="Enter title">
+         <div ng-model="product.user" class="publish-item-subtitle">Current user</div>
+         <input ng-model="product.description" class="publish-item-description empty-input" placeholder="Enter the product description..">
+       </div>
+       <div class="pop-item-bottom">
+         <div class="publish-item-amount">
+           Amount
+         </div>
+         <input ng-model="product.price" class="publish-item-price empty-input" placeholder="Price per product">
+         <input dir="rtl" ng-model="product.date" class="publish-item-date empty-input" placeholder="how long is th">
+       </div>
+     </div>
+     <div class="publish-botton">
+       Upload
+     </div>
+   </div>
+   <div class="">
+     {{product}}
+   </div>
+</div>

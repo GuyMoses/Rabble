@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Inject:css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="src/app.main/main.css">
+    <link rel="stylesheet" href="src/app.main/app/app.css">
+    <link rel="stylesheet" href="src/app.main/publish/publish.css">
+    <!-- End Inject -->
+
+    <!-- Inject: Js Components -->
+    <script src="src/app.assets/js/angular.min.js"></script>
+    <script src="src/app.assets/js/angular-route.min.js"></script>
+    <!-- End Inject -->
+
+    <!-- Inject:Js Files -->
+    <script src="src/index.module.js"></script>
+    <script src="src/app.assets/js/upload.js"></script>
+
+    <script src="src/app.main/navigation/navigation.module.js"></script>
+    <script src="src/app.main/navigation/navigation.controller.js"></script>
+
+    <script src="src/app.main/app/app.module.js"></script>
+    <script src="src/app.main/app/app.controller.js"></script>
+
+    <script src="src/app.main/publish/publish.module.js"></script>
+    <script src="src/app.main/publish/publish.controller.js"></script>
+    <!-- End Inject -->
+
+    <meta charset="utf-8">
+    <title>Geekim 2.0</title>
+  </head>
+  <body ng-app="TheGratApp">
+    <div class="nav-bar" ng-controller="NavCtrl as ctrl">
+      <div class="nav-bar-logo" ng-click="ctrl.GoTo('')">
+        <img height="45px;" src="src/app.assets/img/rabble-purple.jpg"/>
+      </div>
+      <div class="nav-bar-items">
+        <div class="nav-bar-item" ng-click="ctrl.GoTo('')">
+          Discover
+        </div>
+        <div class="nav-bar-item" ng-click="ctrl.GoTo('publish')">
+          Publish
+        </div>
+        <div class="nav-bar-item">
+          About us
+        </div>
+      </div>
+      <div class="nav-bar-search">
+        <div class="nav-bar-search-item"><i class="fa fa-search"></i></div>
+        <input class="nav-bar-search-item empty-input" placeholder="Search">
+      </div>
+      <div class="nav-bar-login">
+        <div class="nav-bar-login-item" ng-click="ctrl.showLogin = !ctrl.showLogin">
+          Login
+        </div>
+        <div class="login-popover" ng-if="ctrl.showLogin">
+          <div class="login-item">
+            <div class="login-container">
+              <input class="empty-input" type="text" name="name" value="" placeholder="email">
+            </div>
+            <div class="login-container">
+              <input class="empty-input" type="password" name="name" value="" placeholder="password">
+            </div>
+          </div>
+          <div class="login-item facebook-icon">
+            <i class="fa fa-facebook-official fa-2x"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-view" ng-view=></div>
+
+  </body>
+</html>
