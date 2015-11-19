@@ -9,10 +9,14 @@
   color: #7D5CA2;
 }
 
-.discover-popular-section
+.discover-section
 {
   padding: 20px;
-  background-color: rgba(125, 92, 162, 0.52);
+}
+
+.discover-popular-section
+{
+  background-color: #EFEFEF;
 }
 
 .discover-popular-headline

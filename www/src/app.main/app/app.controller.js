@@ -1,17 +1,20 @@
 (function(){
 
-  function appCtrl($log,$http,$timeout,$location){
+  function AppCtrl($log,$http,$timeout,$location){
     // Ctrl Params
     this.active = $location.path().substring(1);
 
     // Current Position
     $log.info("Currently on " + this.active);
 
+    this.GoTo = function(destination){
+      $location.path(destination);
+    }
   }
 
-  appCtrl.$inject = ['$log','$http','$timeout','$location'];
+  AppCtrl.$inject = ['$log','$http','$timeout','$location'];
 
   angular.module('app')
-    .controller('appCtrl',appCtrl)
+    .controller('AppCtrl',AppCtrl)
 
 }());
