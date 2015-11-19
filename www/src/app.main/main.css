@@ -82,13 +82,13 @@ body
 {
   float: right;
   overflow: auto;
-  padding: 18px;
+  padding: 12px;
 }
 
 .nav-bar-login-item
 {
   display: inline;
-  padding: 16px;
+  padding: 12px;
   color: #4780A2;
 }
 
