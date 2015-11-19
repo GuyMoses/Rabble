@@ -2,28 +2,33 @@
   function Run(){
 
   }
-
   Run.$inject = [];
 
-  var app = angular.module('TheGratApp',['ngRoute', 'backand','navigation','app','publish','discover'])
+  function Config($routeProvider, BackandProvider) {
+    $routeProvider
+      .when('/',
+      {
+        templateUrl: '/src/app.main/app/app.html'
+      })
+      .when('/publish',{
+        templateUrl: '/src/app.main/publish/publish.html'
+      })
+      .when('/discover',{
+        templateUrl: '/src/app.main/discover/discover.html'
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
+
+      BackandProvider.setAppName('rabble');
+      BackandProvider.setSignUpToken('b3d67378-e181-4d6f-8bd9-a8c24482c7d6');
+      BackandProvider.setAnonymousToken('fc803baf-ee27-4382-8413-96e9e822ccbb');
+  }
+  Config.$inject = ['$routeProvider', 'BackandProvider'];
+
+  var app = angular.module('TheGratApp',['ngRoute', 'backand','navigation','app','publish','discover', 'services'])
                     .run(Run)
-                    .config(['$routeProvider',
-                    function($routeProvider){
-                      $routeProvider
-                        .when('/',
-                        {
-                          templateUrl: '/src/app.main/app/app.html'
-                        })
-                        .when('/publish',{
-                          templateUrl: '/src/app.main/publish/publish.html'
-                        })
-                        .when('/discover',{
-                          templateUrl: '/src/app.main/discover/discover.html'
-                        })
-                        .otherwise({
-                          redirectTo: '/'
-                        });
-                    }]);
+                    .config(Config);
 
   app.directive("ngFileSelect",function(){
     return {

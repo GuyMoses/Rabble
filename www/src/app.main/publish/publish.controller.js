@@ -1,6 +1,6 @@
 (function(){
 
-  function PublishCtrl($scope,$log,$http,$timeout,$location,fileReader){
+  function PublishCtrl($scope,$log,$http,$timeout,$location,fileReader, Product){
 
     $scope.product = {};
 
@@ -13,11 +13,12 @@
     };
 
     $scope.Publish = function(){
+      Product.create($scope.product)
       $log.info($scope.product);
     }
   }
 
-  PublishCtrl.$inject = ['$scope','$log','$http','$timeout','$location','fileReader'];
+  PublishCtrl.$inject = ['$scope','$log','$http','$timeout','$location','fileReader', "Product"];
 
   angular.module('app')
     .controller('PublishCtrl',PublishCtrl)
