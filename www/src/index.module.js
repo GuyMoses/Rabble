@@ -5,7 +5,7 @@
 
   Run.$inject = [];
 
-  var app = angular.module('TheGratApp',['ngRoute','navigation','app','publish','discover'])
+  var app = angular.module('TheGratApp',['ngRoute', 'backand','navigation','app','publish','discover'])
                     .run(Run)
                     .config(['$routeProvider',
                     function($routeProvider){
