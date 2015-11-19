@@ -13,8 +13,16 @@
     };
 
     $scope.Publish = function(){
-      Product.create($scope.product)
-      $log.info($scope.product);
+      Product.uploadImage($scope.product.title, $scope.product.imageSrc).success(function(data) {
+        $log.info(data);
+        $scope.product.imageUrl = data.url
+        Product.create($scope.product).success(function(data) {
+          $log.info(data);
+        });
+      });
+      //"https://api.backand.com/1/objects/action/products/?name=S3FileUpload&parameters=%7B%22filename%22:%22%22,%22filedata%22:%22%22%7D"
+
+      //
     }
   }
 
