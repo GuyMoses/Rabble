@@ -2,10 +2,10 @@
 
   function Auth(http, Backand) {
 
-    this.current_user = {'id': 1, 'name': 'Guy Moses'};
+    this.currentUser = null;
 
     this.Login = function(){
-      
+
     }
   }
   Auth.$inject = ["$http", "Backand"];

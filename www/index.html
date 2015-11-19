@@ -33,6 +33,7 @@
 
     <script src="src/app.services/services.module.js"></script>
     <script src="src/app.services/product.service.js"></script>
+    <script src="src/app.services/auth.service.js"></script>
     <!-- End Inject -->
 
     <meta charset="utf-8">
@@ -59,21 +60,11 @@
         <input class="nav-bar-search-item empty-input" placeholder="Search">
       </div>
       <div class="nav-bar-login">
-        <div class="nav-bar-login-item" ng-click="ctrl.showLogin = !ctrl.showLogin">
-          Login
+        <div ng-if="!ctrl.user" class="nav-bar-login-item" ng-click="ctrl.signIn()">
+          <i class="fa fa-facebook-official fa-2x"></i>
         </div>
-        <div class="login-popover" ng-if="ctrl.showLogin">
-          <div class="login-item">
-            <div class="login-container">
-              <input class="empty-input" type="text" name="name" value="" placeholder="email">
-            </div>
-            <div class="login-container">
-              <input class="empty-input" type="password" name="name" value="" placeholder="password">
-            </div>
-          </div>
-          <div class="login-item facebook-icon" ng-click="ctrl.signIn()">
-            <i class="fa fa-facebook-official fa-2x"></i>
-          </div>
+        <div ng-if="ctrl.user">
+          {{ctrl.user.fullName}}
         </div>
       </div>
     </div>
