@@ -3,7 +3,6 @@
   function PublishCtrl($scope,$log,$http,$timeout,$location,fileReader, Product, Backand, Auth){
 
     $scope.user = Auth.currentUser;
-    $scope.user = {'fullName': 'Guy Moses'};
 
     if(!$scope.user){
       Backand.socialSignIn('facebook').then(function(data) {

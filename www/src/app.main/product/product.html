@@ -1,10 +1,13 @@
 <div class="main-product" ng-controller="ProductCtrl as ctrl">
   <div class="product-page-body">
     <div class="product-page-title">
-      David's Weed
+      {{ctrl.product.title}}
     </div>
     <div class="product-page-user">
-      by David Kaplan
+      by {{ctrl.product.user}}
+    </div>
+    <div class="p-page-description">
+      {{ctrl.product.description}}
     </div>
     <div class="product-page-middle">
       <div class="p-page-image-container">
@@ -12,13 +15,13 @@
       </div>
       <div class="p-page-details">
         <div class="p-page-supports">
-          108 Supporters
+          {{ctrl.product.supporters}} Supporters
         </div>
         <div class="p-page-supports">
-          4 days to go!
+          {{ctrl.product.date}}
         </div>
         <div class="p-page-supports">
-          20 Kilos left
+          {{ctrl.product.amount}} left
         </div>
         <div class="p-page-supports">
           <div class="p-buy-button">
@@ -28,9 +31,6 @@
       </div>
     </div>
     <div class="product-page-bottom">
-      <div class="p-page-description">
-        Description Description i love descriptions.
-      </div>
     </div>
   </div>
 </div>

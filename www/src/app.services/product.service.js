@@ -4,7 +4,7 @@
     this.find = function(id) {
       return http({
         method: 'GET',
-        url: url: Backand.getApiUrl() + '/1/objects/products/' + id,
+        url: Backand.getApiUrl() + '/1/objects/products/' + id,
       });
     };
     this.create = function(data) {
