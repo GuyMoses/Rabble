@@ -1,14 +1,14 @@
 (function() {
 
-  function Auth(http, Backand) {
+  function Auth(http, Backand, MainService) {
 
     this.currentUser = null;
 
-    this.Login = function(){
-
+    this.find = function(userId){
+      return MainService.find("users", [{"fieldName": "userId", "operator": "equals", "value": "" + userId}]);
     }
   }
-  Auth.$inject = ["$http", "Backand"];
+  Auth.$inject = ["$http", "Backand", "MainService"];
 
   angular.module('services')
     .service('Auth', Auth);

@@ -1,7 +1,16 @@
 (function() {
 
-  function Product(http, Backand, MainService) {
+  function Product(http, Backand, MainService, Auth) {
+    this.find = function(id) {
+      return http({
+        method: 'GET',
+        url: url: Backand.getApiUrl() + '/1/objects/products/' + id,
+      });
+    };
     this.create = function(data) {
+      data.user = {
+
+      }
       return MainService.create("products", data);
     };
     this.searchByCategory = function(category) {
@@ -32,7 +41,7 @@
       });
     };
   }
-  Product.$inject = ["$http", "Backand", "MainService"];
+  Product.$inject = ["$http", "Backand", "MainService", "Auth"];
 
   angular.module('services').service('Product', Product);
 })();

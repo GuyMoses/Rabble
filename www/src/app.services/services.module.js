@@ -17,7 +17,21 @@
         url: Backand.getApiUrl() + '/1/objects/' + name,
         data: data
       });
-    }
+    };
+    this.find = function(name, params) {
+      return http({
+        method: 'GET',
+        url: Backand.getApiUrl() + '/1/objects/' + name,
+        params: params
+      });
+    };
+    this.update = function(name, data) {
+      return http({
+        method: "PUT",
+        url: Backand.getApiUrl() + '/1/objects/' + name + "/" + data.id,
+        data: data
+      });
+    };
   }
   MainService.$inject = ["$http", "Backand"];
 
