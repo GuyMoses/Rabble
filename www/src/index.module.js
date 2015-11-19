@@ -19,6 +19,9 @@
       .when('/product/:id',{
         templateUrl: '/src/app.main/product/product.html'
       })
+      .when('/profile/:id',{
+        templateUrl: '/src/app.main/profile/profile.html'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -29,7 +32,7 @@
   }
   Config.$inject = ['$routeProvider', 'BackandProvider'];
 
-  var app = angular.module('TheGratApp',['ngRoute', 'backand','navigation','app','publish','product','discover', 'services'])
+  var app = angular.module('TheGratApp',['ngRoute', 'backand','navigation','app','publish','product','profile','discover', 'services'])
                     .run(Run)
                     .config(Config);
 
