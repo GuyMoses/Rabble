@@ -12,7 +12,7 @@
     }
 
     this.signIn = function() {
-      Backand.socialSignin('facebook').then(function(data) {
+      Backand.socialSignIn('facebook').then(function(data) {
         $log.info(data);
       });
     };
