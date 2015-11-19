@@ -1,0 +1,21 @@
+{
+  "name": "Rabble",
+  "version": "0.0.0",
+  "homepage": "https://github.com/GuyMoses/Rabble",
+  "authors": [
+    "Ido Ben-Natan <ido.bennatan@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.26",
+    "angular-input-date": "~1.0.4"
+  }
+}
