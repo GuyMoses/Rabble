@@ -26,7 +26,7 @@
           'Content-Type': 'application/json'
         },
         data: {
-          "filename": "something.jpg",
+          "filename": filename + ".jpg",
           "filedata": filedata.substr(filedata.indexOf(',')+1, filedata.length) //need to remove the file prefix type
         }
       });
