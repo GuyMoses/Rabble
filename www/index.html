@@ -12,7 +12,7 @@
     <!-- Inject: Js Components -->
     <script src="src/app.assets/js/angular.min.js"></script>
     <script src="src/app.assets/js/angular-route.min.js"></script>
-    <script src="src/app.assets/js/backand.min.js"></script>
+    <script src="//cdn.backand.net/backand/dist/1.8.1/backand.min.js"></script>
     <!-- End Inject -->
 
     <!-- Inject:Js Files -->
@@ -71,7 +71,7 @@
               <input class="empty-input" type="password" name="name" value="" placeholder="password">
             </div>
           </div>
-          <div class="login-item facebook-icon">
+          <div class="login-item facebook-icon" ng-click="ctrl.signIn()">
             <i class="fa fa-facebook-official fa-2x"></i>
           </div>
         </div>
