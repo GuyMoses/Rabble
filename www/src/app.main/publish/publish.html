@@ -3,7 +3,7 @@
     Upload your product
   </div>
    <div class="main-content">
-     <div class="published-item">
+     <div class="published-item" ng-class="{'faded-item': publishing}">
        <div class="publish-item-container">
          <input class="publish-image-input" type="file" ng-file-select="ctrl.onFileSelect(ctrl.$files)" >
          <img class="publish-item-image" height="350px;" ng-src="{{product.imageSrc}}" type="file" ng-file-select="ctrl.onFileSelect(ctrl.$files)"/>
@@ -25,7 +25,8 @@
        </div>
      </div>
      <div class="publish-botton" ng-click="Publish();">
-       Upload
+       <div ng-if="!publishing">Upload</div>
+       <i ng-if="publishing" class="fa fa-cog fa-3x fa-spin"></i>
      </div>
    </div>
    <!-- <div class="">

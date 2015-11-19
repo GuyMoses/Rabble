@@ -16,7 +16,6 @@ body
   position: fixed;
   width: 100%;
   background-color: #fff;
-  box-shadow: 1px 1px 1px 1px #EFEFEF;
   z-index: 10000;
 }
 
