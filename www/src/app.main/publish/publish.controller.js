@@ -1,6 +1,18 @@
 (function(){
 
-  function PublishCtrl($scope,$log,$http,$timeout,$location,fileReader, Product){
+  function PublishCtrl($scope,$log,$http,$timeout,$location,fileReader, Product, Backand, Auth){
+
+    $scope.user = Auth.currentUser;
+
+    if(!$scope.user){
+      Backand.socialSignIn('facebook').then(function(data) {
+        $log.info(data);
+        Auth.currentUser = Backand.getUserDetails().$$state.value;
+        $log.info(Auth.currentUser);
+        $scope.user = Auth.currentUser;
+        $scope.showLogin = false;
+      });
+    }
 
     $scope.product = {};
     $scope.publishing = false;
@@ -23,13 +35,10 @@
           $scope.publishing = false;
         });
       });
-      //"https://api.backand.com/1/objects/action/products/?name=S3FileUpload&parameters=%7B%22filename%22:%22%22,%22filedata%22:%22%22%7D"
-
-      //
     }
   }
 
-  PublishCtrl.$inject = ['$scope','$log','$http','$timeout','$location','fileReader', "Product"];
+  PublishCtrl.$inject = ['$scope','$log','$http','$timeout','$location','fileReader', "Product", 'Backand','Auth'];
 
   angular.module('app')
     .controller('PublishCtrl',PublishCtrl)

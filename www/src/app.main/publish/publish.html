@@ -10,12 +10,12 @@
        </div>
        <div class="pop-item-middle">
          <input ng-model="product.title" class="publish-item-title empty-input" placeholder="Enter title">
-         <div ng-model="product.user" class="publish-item-subtitle">Current user</div>
+         <div ng-model="product.user" class="publish-item-subtitle">{{user.fullName}}</div>
          <input ng-model="product.description" class="publish-item-description empty-input" placeholder="Enter the product description..">
        </div>
        <div class="pop-item-bottom">
          <div class="publish-item-amount">
-           Goals
+           <input ng-model="product.category" class="publish-item-category empty-input" placeholder="Enter a category">
          </div>
        </div>
        <div class="pop-item-bottom">

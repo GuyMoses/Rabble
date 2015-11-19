@@ -133,6 +133,12 @@
   clear: both;
 }
 
+.publish-item-category
+{
+  font-size: 18px;
+  color: #444;
+}
+
 .publish-item-price
 {
   float: left;
