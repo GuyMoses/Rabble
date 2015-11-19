@@ -11,6 +11,10 @@
                           $scope.product.imageSrc = result;
                       });
     };
+
+    $scope.Publish = function(){
+      $log.info($scope.product);
+    }
   }
 
   PublishCtrl.$inject = ['$scope','$log','$http','$timeout','$location','fileReader'];

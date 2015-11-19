@@ -1,5 +1,6 @@
-<div class="main" ng-controller="PublishCtrl as ctrl">
-  <div class="">
+<div class="main-publish" ng-controller="PublishCtrl as ctrl">
+  <div class="publish-title">
+    Upload your product
   </div>
    <div class="main-content">
      <div class="published-item">
@@ -14,17 +15,20 @@
        </div>
        <div class="pop-item-bottom">
          <div class="publish-item-amount">
-           Amount
+           Goals
          </div>
+       </div>
+       <div class="pop-item-bottom">
          <input ng-model="product.price" class="publish-item-price empty-input" placeholder="Price per product">
-         <input dir="rtl" ng-model="product.date" class="publish-item-date empty-input" placeholder="how long is th">
+         <input type="date" dir="rtl" ng-model="product.date" class="publish-item-date empty-input" placeholder="Whats your due date">
+         <!--<input ng-model="product.date" class="publish-item-date empty-input" type="date">-->
        </div>
      </div>
-     <div class="publish-botton">
+     <div class="publish-botton" ng-click="Publish();">
        Upload
      </div>
    </div>
-   <div class="">
+   <!-- <div class="">
      {{product}}
-   </div>
+   </div> -->
 </div>

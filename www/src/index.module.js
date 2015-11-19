@@ -5,7 +5,7 @@
 
   Run.$inject = [];
 
-  var app = angular.module('TheGratApp',['ngRoute','navigation','app','publish'])
+  var app = angular.module('TheGratApp',['ngRoute','navigation','app','publish','discover'])
                     .run(Run)
                     .config(['$routeProvider',
                     function($routeProvider){
@@ -16,6 +16,9 @@
                         })
                         .when('/publish',{
                           templateUrl: '/src/app.main/publish/publish.html'
+                        })
+                        .when('/discover',{
+                          templateUrl: '/src/app.main/discover/discover.html'
                         })
                         .otherwise({
                           redirectTo: '/'

@@ -1,0 +1,56 @@
+.main-dicover
+{
+  margin-top: 7%;
+}
+
+.discover-title
+{
+  margin-bottom: 2%;
+  color: #7D5CA2;
+}
+
+.discover-popular-section
+{
+  padding: 20px;
+  background-color: rgba(125, 92, 162, 0.52);
+}
+
+.discover-popular-headline
+{
+  font-size: 28px;
+  font-weight: 100;
+  margin-bottom: 2%;
+}
+
+.discover-popular-items
+{
+  overflow: auto;
+  margin-bottom: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90vw;
+}
+
+.discover-item
+{
+  float: left;
+  margin-left: 1%;
+  margin-right: 1%;
+  width: 250px;
+  min-height: 250px;
+  border-radius: 4%;
+  border: 1px solid #DADADA;
+  background-color: #fff;
+}
+
+.discover-item:hover
+{
+  transition: 0.2s all linear;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.discover-image
+{
+  text-align: center;
+}

@@ -2,10 +2,11 @@
 <html>
   <head>
     <!-- Inject:css -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="src/app.main/main.css">
     <link rel="stylesheet" href="src/app.main/app/app.css">
     <link rel="stylesheet" href="src/app.main/publish/publish.css">
+    <link rel="stylesheet" href="src/app.main/discover/discover.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- End Inject -->
 
     <!-- Inject: Js Components -->
@@ -25,6 +26,9 @@
 
     <script src="src/app.main/publish/publish.module.js"></script>
     <script src="src/app.main/publish/publish.controller.js"></script>
+
+    <script src="src/app.main/discover/discover.module.js"></script>
+    <script src="src/app.main/discover/discover.controller.js"></script>
     <!-- End Inject -->
 
     <meta charset="utf-8">
@@ -36,7 +40,7 @@
         <img height="45px;" src="src/app.assets/img/rabble-purple.jpg"/>
       </div>
       <div class="nav-bar-items">
-        <div class="nav-bar-item" ng-click="ctrl.GoTo('')">
+        <div class="nav-bar-item" ng-click="ctrl.GoTo('discover')">
           Discover
         </div>
         <div class="nav-bar-item" ng-click="ctrl.GoTo('publish')">

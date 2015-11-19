@@ -1,5 +1,18 @@
+.main-publish
+{
+  margin-top: 7%;
+}
+
+.publish-title
+{
+  font-size: 36px;
+  font-weight: 100;
+  text-align: center;
+}
+
 .main-content
 {
+  margin-top: 3%;
   padding-top: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -14,7 +27,7 @@
   right: 200px;
   top: 300px;
   padding: 30px;
-  background: rgba(255, 0, 102, 0.65);
+  background: #7D5CA2;
   color: #fff;
   border-radius: 100%;
   width: 55px;
@@ -36,11 +49,12 @@
   margin-right: auto;
   overflow: auto;
   width: 450px;
-  height: 600px;
+  height: 100%;
   text-align: center;
   min-height: 400px;
   border-radius: 4%;
   border: 1px solid #DADADA;
+  margin-bottom: 5%;
 }
 
 .publish-item-container
@@ -115,6 +129,8 @@
 .publish-item-amount
 {
   height: 40px;
+  float: left;
+  clear: both;
 }
 
 .publish-item-price
