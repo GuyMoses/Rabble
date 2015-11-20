@@ -16,11 +16,7 @@
     this.find = function(id) {
       return http({
         method: 'GET',
-<<<<<<< HEAD
         url: Backand.getApiUrl() + '/1/objects/products/' + id
-=======
-        url: Backand.getApiUrl() + '/1/objects/products/' + id,
->>>>>>> e76eb7b94d2b301250fba42994a0a4cec8207430
       });
     };
     this.create = function(data) {

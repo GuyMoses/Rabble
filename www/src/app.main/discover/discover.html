@@ -2,6 +2,33 @@
   <div class="publish-title discover-title">
     Discover the best products and deals!
   </div>
+  <div class="discover-closest-section discover-section">
+    <div class="discover-popular-headline">
+      Closest deals
+    </div>
+    <div class="discover-popular-items">
+      <div class="discover-item" ng-repeat="item in ctrl.popularItems" ng-click="ctrl.GoTo('product/5')">
+        <div class="pop-item-image discover-image">
+          <img class="pop-item-image" width="250px;" src="http://lg.220-electronics.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/2/2/220-volt-kitchenaid-artisan-stand-mixer-pistachio.jpg"/>
+        </div>
+        <div class="pop-item-middle">
+          <div class="pop-item-title">{{item.title}}</div>
+          <div class="pop-item-subtitle">{{item.user}}</div>
+          <div class="pop-item-description">
+            {{item.description}}
+          </div>
+        </div>
+        <div class="pop-item-bottom">
+          <div class="meter">
+            <span style="width: {{item.percent}}%"></span>
+            <div class="meter-precentage">{{item.percent}}%</div>
+          </div>
+          <div class="pop-item-price">{{item.price}}</div>
+          <div class="pop-item-date">{{item.date}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="discover-popular-section discover-section">
     <div class="discover-popular-headline">
       Most popular deals
