@@ -28,8 +28,6 @@
         members.success(function(bytes) {
           Auth.currentUser.id = bytes.data[0].id;
           navigator.geolocation.getCurrentPosition(function(result){
-            // $log.info(result.coords.latitude);
-            // $log.info(result.coords.longitude);
             Auth.updateGeo(result.coords.latitude,result.coords.longitude,Auth.currentUser.id)
             .success(function(crap){
               $log.info(crap);

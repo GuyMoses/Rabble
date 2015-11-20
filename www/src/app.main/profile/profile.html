@@ -5,9 +5,9 @@
     </div>
     <div class="profile-items">
       <div class="discover-popular-items">
-        <div class="discover-item" ng-repeat="item in ctrl.popularItems" ng-click="ctrl.GoTo('product/5')">
+        <div class="discover-item" ng-repeat="item in ctrl.popularItems" style="margin-top: 2%;">
           <div class="pop-item-image discover-image">
-            <img class="pop-item-image" width="250px;" ng-src="{{item.imageUrl}}"/>
+            <img class="pop-item-image" height="170px;" width="250px;" ng-src="{{item.imageUrl}}"/>
           </div>
           <div class="pop-item-middle">
             <div class="pop-item-title">{{item.title}}</div>
