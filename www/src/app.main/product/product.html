@@ -11,7 +11,7 @@
     </div>
     <div class="product-page-middle">
       <div class="p-page-image-container">
-        <img class="product-page-image" width="600px;" src="http://www.smoketheweed.com/wp-content/uploads/2015/09/weed-wallpaper-65.jpg"/>
+        <img class="product-page-image" width="600px;" ng-src="{{ctrl.product.imageUrl}}"/>
       </div>
       <div class="p-page-details">
         <div class="p-page-supports">
@@ -25,7 +25,7 @@
         </div>
         <div class="p-page-supports">
           <div class="p-buy-button">
-            Buy Some weed
+            Buy Some {{ctrl.product.title}}
           </div>
         </div>
       </div>

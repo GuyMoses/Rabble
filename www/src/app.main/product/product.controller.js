@@ -11,7 +11,7 @@
     Product.find(this.id)
       .success(function(data){
         $log.info(data);
-        //$scope.product = data;
+        $scope.product = data;
       });
   }
 

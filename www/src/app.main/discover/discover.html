@@ -7,15 +7,20 @@
       Closest deals
     </div>
     <div class="discover-popular-items">
-      <div class="discover-item" ng-repeat="item in ctrl.popularItems" ng-click="ctrl.GoTo('product/5')">
+      <div class="discover-item" ng-repeat="item in ctrl.nearItems" ng-click="ctrl.GoTo('product/',item.id)">
         <div class="pop-item-image discover-image">
-          <img class="pop-item-image" width="250px;" src="http://lg.220-electronics.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/2/2/220-volt-kitchenaid-artisan-stand-mixer-pistachio.jpg"/>
+          <img class="pop-item-image" width="250px;" ng-src="{{item.imageUrl}}"/>
         </div>
         <div class="pop-item-middle">
+          <div class="">
+          </div>
           <div class="pop-item-title">{{item.title}}</div>
           <div class="pop-item-subtitle">{{item.user}}</div>
           <div class="pop-item-description">
             {{item.description}}
+          </div>
+          <div class="" style="margin-top: 2%; color: #f06;">
+            {{item.distance}} km away!
           </div>
         </div>
         <div class="pop-item-bottom">
@@ -23,8 +28,8 @@
             <span style="width: {{item.percent}}%"></span>
             <div class="meter-precentage">{{item.percent}}%</div>
           </div>
-          <div class="pop-item-price">{{item.price}}</div>
-          <div class="pop-item-date">{{item.date}}</div>
+          <div class="pop-item-price">{{item.price}}$</div>
+          <div class="pop-item-date">{{item.expiresAt}}</div>
         </div>
       </div>
     </div>
@@ -34,15 +39,20 @@
       Most popular deals
     </div>
     <div class="discover-popular-items">
-      <div class="discover-item" ng-repeat="item in ctrl.popularItems" ng-click="ctrl.GoTo('product/5')">
+      <div class="discover-item" ng-repeat="item in ctrl.popularItems" ng-click="ctrl.GoTo('product/',item.id)">
         <div class="pop-item-image discover-image">
-          <img class="pop-item-image" width="250px;" src="http://lg.220-electronics.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/2/2/220-volt-kitchenaid-artisan-stand-mixer-pistachio.jpg"/>
+          <img class="pop-item-image" width="250px;" ng-src="{{item.imageUrl}}"/>
         </div>
         <div class="pop-item-middle">
+          <div class="">
+          </div>
           <div class="pop-item-title">{{item.title}}</div>
           <div class="pop-item-subtitle">{{item.user}}</div>
           <div class="pop-item-description">
             {{item.description}}
+          </div>
+          <div class="" style="margin-top: 2%; color: #f06;">
+            {{item.distance}} km away!
           </div>
         </div>
         <div class="pop-item-bottom">
@@ -50,8 +60,8 @@
             <span style="width: {{item.percent}}%"></span>
             <div class="meter-precentage">{{item.percent}}%</div>
           </div>
-          <div class="pop-item-price">{{item.price}}</div>
-          <div class="pop-item-date">{{item.date}}</div>
+          <div class="pop-item-price">{{item.price}}$</div>
+          <div class="pop-item-date">{{item.expiresAt}}</div>
         </div>
       </div>
     </div>
@@ -61,15 +71,20 @@
       Best Vegetables deals
     </div>
     <div class="discover-popular-items">
-      <div class="discover-item" ng-repeat="item in ctrl.vegItems" ng-click="ctrl.GoTo('product/5')">
+      <div class="discover-item" ng-repeat="item in ctrl.vegItems" ng-click="ctrl.GoTo('product/',item.id)">
         <div class="pop-item-image discover-image">
-          <img class="pop-item-image" width="250px;" src="http://pomi.us.com/images/tomatoes.jpg"/>
+          <img class="pop-item-image" width="250px;" ng-src="{{item.imageUrl}}"/>
         </div>
         <div class="pop-item-middle">
+          <div class="">
+          </div>
           <div class="pop-item-title">{{item.title}}</div>
           <div class="pop-item-subtitle">{{item.user}}</div>
           <div class="pop-item-description">
             {{item.description}}
+          </div>
+          <div class="" style="margin-top: 2%; color: #f06;">
+            {{item.distance}} km away!
           </div>
         </div>
         <div class="pop-item-bottom">
@@ -77,26 +92,31 @@
             <span style="width: {{item.percent}}%"></span>
             <div class="meter-precentage">{{item.percent}}%</div>
           </div>
-          <div class="pop-item-price">{{item.price}}</div>
-          <div class="pop-item-date">{{item.date}}</div>
+          <div class="pop-item-price">{{item.price}}$</div>
+          <div class="pop-item-date">{{item.expiresAt}}</div>
         </div>
       </div>
     </div>
   </div>
-  <div class="discover-popular-section discover-section">
+  <div class="discover-tech-section discover-section">
     <div class="discover-popular-headline">
       Best Fruits deals
     </div>
     <div class="discover-popular-items">
-      <div class="discover-item" ng-repeat="item in ctrl.fruitItems" ng-click="ctrl.GoTo('product/5')">
+      <div class="discover-item" ng-repeat="item in ctrl.fruitItems" ng-click="ctrl.GoTo('product/',item.id)">
         <div class="pop-item-image discover-image">
-          <img class="pop-item-image" width="250px;" src="https://addons.opera.com/media/image-cache/themes/55/68255/1.0-rev1/images/03051a30-adfe-4be6-9964-4e7332476113_details_big.jpe"/>
+          <img class="pop-item-image" width="250px;" ng-src="{{item.imageUrl}}"/>
         </div>
         <div class="pop-item-middle">
+          <div class="">
+          </div>
           <div class="pop-item-title">{{item.title}}</div>
           <div class="pop-item-subtitle">{{item.user}}</div>
           <div class="pop-item-description">
             {{item.description}}
+          </div>
+          <div class="" style="margin-top: 2%; color: #f06;">
+            {{item.distance}} km away!
           </div>
         </div>
         <div class="pop-item-bottom">
@@ -104,8 +124,8 @@
             <span style="width: {{item.percent}}%"></span>
             <div class="meter-precentage">{{item.percent}}%</div>
           </div>
-          <div class="pop-item-price">{{item.price}}</div>
-          <div class="pop-item-date">{{item.date}}</div>
+          <div class="pop-item-price">{{item.price}}$</div>
+          <div class="pop-item-date">{{item.expiresAt}}</div>
         </div>
       </div>
     </div>

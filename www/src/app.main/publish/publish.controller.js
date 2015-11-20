@@ -5,13 +5,7 @@
     $scope.user = Auth.currentUser;
 
     if(!$scope.user){
-      Backand.socialSignIn('facebook').then(function(data) {
-        $log.info(data);
-        Auth.currentUser = Backand.getUserDetails().$$state.value;
-        $log.info(Auth.currentUser);
-        $scope.user = Auth.currentUser;
-        $scope.showLogin = false;
-      });
+      $location.path('');
     }
 
     $scope.product = {};
@@ -33,9 +27,17 @@
           $scope.product.imageUrl = data.url;
           // $scope.product.user = ;
           $scope.product.geom = "ST_GeomFromText('POINT(1, 1)')";
+          $scope.product.owner = Auth.currentUser.id;
           Product.create($scope.product).success(function(data) {
             $log.info(data);
             $scope.publishing = false;
+            navigator.geolocation.getCurrentPosition(function(result){
+              Product.updateGeo(result.coords.latitude,result.coords.longitude,Auth.currentUser.id,data.id)
+                .success(function(crap){
+                  $log.info(crap);
+                });
+            });
+            $location.path('');
           });
         });
       }
