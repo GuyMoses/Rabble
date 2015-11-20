@@ -17,7 +17,7 @@
     this.support = function() {
       Product.createSupport(Auth.currentUser.id, this.id).success(function() {
         // go to the things I've supported
-        $location.path("/profile/" + this.user.id);
+        $location.path("/profile/" + Auth.currentUser.id);
       });
     };
   }
