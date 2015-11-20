@@ -1,6 +1,16 @@
 (function() {
 
   function Product(http, Backand, MainService, Auth) {
+    this.createSupport = function(userId, productId) {
+      return http({
+                method: "POST",
+                url: Backand.getApiUrl() + '1/objects/supports'
+                data: {
+                  user: userId,
+                  product: productId
+                }
+              });
+    };
     this.findMine = function(userId) {
       return http ({
                 method: 'GET',

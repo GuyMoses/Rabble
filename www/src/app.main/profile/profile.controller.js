@@ -6,6 +6,7 @@
     this.id = $routeParams.id;
 
     Product.findMine(this.id).success(function(data) {
+      $log.info(data);
       this.popularItems = data;
     })
     //
