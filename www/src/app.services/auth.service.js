@@ -10,8 +10,8 @@
 
     this.updateGeo = function(lat, lon, userId) {
       return http ({
-        method: 'PUT',
-        url: Backand.getApiUrl() + '/1/objects/users/' + userId,
+        method: 'POST',
+        url: Backand.getApiUrl() + '/1/objects/action/users/' + userId,
         params: {
           name: 'Update Geo For User',
           parameters: {

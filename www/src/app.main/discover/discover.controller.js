@@ -1,6 +1,7 @@
 (function(){
 
   function DiscoverCtrl($log,$http,$timeout,$location, Product){
+    //Auth.currentUser.userId
     Product.findByGeo(50, 4).success(function(data) {
       $log.info("the stuff");
       $log.info(data);
