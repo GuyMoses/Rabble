@@ -1,6 +1,11 @@
 (function(){
 
   function DiscoverCtrl($log,$http,$timeout,$location, Product){
+    Product.findByGeo(50, 4).success(function(data) {
+      $log.info("the stuff");
+      $log.info(data);
+    });
+
     this.popularItems = [
                           {'title': 'Kitchen aid', 'user': 'Guy Moses', 'description': 'Kitchen aid lets you mix stuff in the kitchen, its quite good.', 'percent': '70', 'price': '150$', 'date': '5 days to go'},
                           {'title': 'Kitchen aid', 'user': 'Guy Moses', 'description': 'Kitchen aid lets you mix stuff in the kitchen, its quite good.', 'percent': '70', 'price': '150$', 'date': '5 days to go'},

@@ -1,16 +1,25 @@
 (function() {
 
   function Product(http, Backand, MainService, Auth) {
+    this.findByGeo = function(lat, lon, id) {
+      return http({
+        method: 'GET',
+        url: Backand.getApiUrl() + "/1/query/data/distance",
+        params: {
+          parameters: {
+            distance:50,
+            userId:4
+          }
+        }
+      })
+    };
     this.find = function(id) {
       return http({
         method: 'GET',
-        url: url: Backand.getApiUrl() + '/1/objects/products/' + id,
+        url: Backand.getApiUrl() + '/1/objects/products/' + id
       });
     };
     this.create = function(data) {
-      data.user = {
-
-      }
       return MainService.create("products", data);
     };
     this.searchByCategory = function(category) {
@@ -25,6 +34,22 @@
               }]
         }
       });
+    };
+    this.updateGeo = function(lat, lon, id) {
+      return $http ({
+                      method: 'PUT',
+                      url: Backand.getApiUrl() + '/1/objects/users/' + id,
+                      params: {
+                        name: 'Update Geo For User',
+                        parameters: {
+                          lat: lat,
+                          lon: lon
+                        }
+                      },
+                      data: {
+                        id: id,
+                      }
+                    });
     };
     this.uploadImage = function(filename, filedata) {
       return http ({

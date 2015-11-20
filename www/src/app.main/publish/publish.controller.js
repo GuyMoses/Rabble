@@ -3,7 +3,6 @@
   function PublishCtrl($scope,$log,$http,$timeout,$location,fileReader, Product, Backand, Auth){
 
     $scope.user = Auth.currentUser;
-    $scope.user = {'fullName': 'Guy Moses'};
 
     if(!$scope.user){
       Backand.socialSignIn('facebook').then(function(data) {
@@ -11,6 +10,7 @@
         Auth.currentUser = Backand.getUserDetails().$$state.value;
         $log.info(Auth.currentUser);
         $scope.user = Auth.currentUser;
+        $scope.showLogin = false;
       });
     }
 
@@ -26,15 +26,19 @@
     };
 
     $scope.Publish = function(){
-      $scope.publishing = true;
-      Product.uploadImage($scope.product.title, $scope.product.imageSrc).success(function(data) {
-        $log.info(data);
-        $scope.product.imageUrl = data.url
-        Product.create($scope.product).success(function(data) {
+      if (Auth.currentUser) {
+        $scope.publishing = true;
+        Product.uploadImage($scope.product.title, $scope.product.imageSrc).success(function(data) {
           $log.info(data);
-          $scope.publishing = false;
+          $scope.product.imageUrl = data.url;
+          // $scope.product.user = ;
+          $scope.product.geom = "ST_GeomFromText('POINT(1, 1)')";
+          Product.create($scope.product).success(function(data) {
+            $log.info(data);
+            $scope.publishing = false;
+          });
         });
-      });
+      }
     }
   }
 
