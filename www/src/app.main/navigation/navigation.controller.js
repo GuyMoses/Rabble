@@ -11,6 +11,10 @@
       $location.path(destination);
     }
 
+    this.GoToProfile = function(destination,id){
+      $location.path(destination+"/"+id);
+    }
+
     this.signIn = function() {
       $scope = this;
       Backand.socialSignIn('facebook').then(function(data) {
