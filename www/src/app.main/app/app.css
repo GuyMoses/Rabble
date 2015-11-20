@@ -19,6 +19,8 @@
   margin-right: auto;
   color: #fff;
   text-shadow: 3px 3px #555;
+  background-color: rgba(8, 8, 8, 0.55);
+  border-radius: 10px;
 }
 
 .popular
