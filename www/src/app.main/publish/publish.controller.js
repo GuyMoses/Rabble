@@ -37,7 +37,7 @@
                   $log.info(crap);
                 });
             });
-            $location.path('');
+            $location.path('/discover');
           });
         });
       }

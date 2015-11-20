@@ -75,7 +75,7 @@ body
 
 .empty-input.nav-bar-search-item
 {
-  min-width: 400px;
+  min-width: 30vw;
 }
 
 .nav-bar-login

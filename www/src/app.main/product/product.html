@@ -21,7 +21,7 @@
           {{ctrl.product.supporters.split(',').length}} Supporters
         </div>
         <div class="p-page-supports">
-          {{ctrl.product.amount - ctrl.product.supporters.split(',').length}} left
+          {{ctrl.product.amount - ctrl.product.supporters.split(',').length}} (kg) left
         </div>
         <div class="p-page-supports" ng-if="ctrl.service.currentUser">
           <div class="p-buy-button" ng-click="ctrl.support()">
