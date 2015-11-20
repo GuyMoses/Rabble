@@ -7,17 +7,22 @@
     this.find = function(userId){
       return MainService.find("users", [{"fieldName": "userId", "operator": "equals", "value": "" + userId}]);
     };
-    this.findByGeo = function(lat, lon, id) {
-      return http({
-        method: 'GET',
-        url: Backand.getApiUrl() + "/1/query/data/distance",
+
+    this.updateGeo = function(lat, lon, userId) {
+      return $http ({
+        method: 'PUT',
+        url: Backand.getApiUrl() + '/1/objects/users/' + userId,
         params: {
+          name: 'Update Geo For User',
           parameters: {
-            distance:50,
-            userId:4
+            lat: lat,
+            lon: lon
           }
+        },
+        data: {
+          id: userId,
         }
-      })
+      });
     };
   }
   Auth.$inject = ["$http", "Backand", "MainService"];
