@@ -13,6 +13,13 @@
         $log.info(data);
         $scope.product = data;
       });
+
+    this.support = function() {
+      Product.createSupport(this.user.id, this.id).success(function() {
+        // go to the things I've supported
+        $location.path("/profile/" + this.user.id);
+      });
+    };
   }
 
   ProductCtrl.$inject = ['$log','$http','$timeout','$location', '$routeParams','Backand', 'Auth', 'Product'];
