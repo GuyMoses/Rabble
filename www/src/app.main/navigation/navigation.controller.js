@@ -19,21 +19,11 @@
         $log.info("Auth user", Auth.currentUser);
         $scope.user = Auth.currentUser;
         $scope.showLogin = false;
-        $log.info("user id", Auth.currentUser.userId);
-        // Auth.find(Auth.currentUser.userId).success(function(data) {
-        //   if (data.totalRows == 0) {
-        //     // create user
-        //     MainService.create('users', {name: $scope.user.fullName, email: $scope.user.username, userId: $scope.user.userId}).success(function(data) {
-        //       $log.info("successfully created the user", data);
-        //     });
-        //   } else {
-        //     // keep on keeping on :)
-        //     Auth.currentUser.id = data.data[0].id;
-        //     MainService.update("users", Auth.currentUser).success(function(data) {
-        //       $log.info("found you ;)", data);
-        //     });
-        //   }
-        // });
+        var members = $http({method:"GET",url: Backand.getApiUrl() + "/1/objects/users?filter=" +
+        "[{\"fieldName\": \"email\",\"operator\": \"equals\",\"value\": \"" + Auth.currentUser.username + "\"}]"});
+        members.success(function(bytes) {
+          Auth.currentUser.id = bytes.data[0].id;
+        });
       });
     };
   }
