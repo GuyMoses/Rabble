@@ -34,7 +34,7 @@
       Product.searchByCategory('near')
         .success(function(data){
           $log.debug(data);
-          $scope.fruitItems = data.data;
+          $scope.nearItems = data.data;
         });
 
     this.GoTo = function(destination,id){
