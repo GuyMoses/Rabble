@@ -1,6 +1,18 @@
 (function() {
 
   function Product(http, Backand, MainService, Auth) {
+    this.findMine = function(userId) {
+      return http ({
+                method: 'GET',
+                url: Backand.getApiUrl() + '/1/objects/action/products/23',
+                params: {
+                  name: 'My Products',
+                  parameters: {
+                    userId: userId
+                  }
+                }
+              });
+    };
     this.findByGeo = function(distance, userId) {
       return http({
         method: 'GET',
