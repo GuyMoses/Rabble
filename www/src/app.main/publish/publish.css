@@ -148,8 +148,9 @@
 
 .publish-item-date
 {
-  float: right;
+  float: left;
   font-size: 14px;
+  margin-top: 5%;
   color: #555;
 }
 

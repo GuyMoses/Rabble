@@ -40,9 +40,9 @@
       });
     };
     this.updateGeo = function(lat, lon, id) {
-      return $http ({
+      return http ({
                       method: 'PUT',
-                      url: Backand.getApiUrl() + '/1/objects/products/' + id,
+                      url: Backand.getApiUrl() + '/1/objects/action/products/' + id,
                       params: {
                         name: 'Update Data In Product',
                         parameters: {
