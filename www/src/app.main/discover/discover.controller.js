@@ -8,41 +8,37 @@
       $log.info("End");
     });
 
-    this.popularItems = [
-                          {'title': 'Kitchen aid', 'user': 'Guy Moses', 'description': 'Kitchen aid lets you mix stuff in the kitchen, its quite good.', 'percent': '70', 'price': '150$', 'date': '5 days to go'},
-                          {'title': 'Kitchen aid', 'user': 'Guy Moses', 'description': 'Kitchen aid lets you mix stuff in the kitchen, its quite good.', 'percent': '70', 'price': '150$', 'date': '5 days to go'},
-                          {'title': 'Kitchen aid', 'user': 'Guy Moses', 'description': 'Kitchen aid lets you mix stuff in the kitchen, its quite good.', 'percent': '70', 'price': '150$', 'date': '5 days to go'},
-                          {'title': 'Kitchen aid', 'user': 'Guy Moses', 'description': 'Kitchen aid lets you mix stuff in the kitchen, its quite good.', 'percent': '70', 'price': '150$', 'date': '5 days to go'}
-                        ];
+    $scope = this;
+    this.popularItems = [];
+    Product.searchByCategory('popular')
+      .success(function(data){
+        $log.debug(data);
+        $scope.popularItems = data.data;
+      });
+
+    this.vegItems = [];
     Product.searchByCategory('veg')
       .success(function(data){
         $log.debug(data);
+        $scope.vegItems = data.data;
       });
 
-    this.vegItems = [
-                        {'title': "Avi's Tomatoes", 'user': 'Guy Moses', 'description': 'perfectly red round tomatoes', 'percent': '90', 'price': '4.5$', 'date': '4 days to go'},
-                        {'title': 'Kitchen aid', 'user': 'Guy Moses', 'description': 'Kitchen aid lets you mix stuff in the kitchen, its quite good.', 'percent': '70', 'price': '150$', 'date': '5 days to go'},
-                        {'title': 'Kitchen aid', 'user': 'Guy Moses', 'description': 'Kitchen aid lets you mix stuff in the kitchen, its quite good.', 'percent': '70', 'price': '150$', 'date': '5 days to go'},
-                        {'title': 'Kitchen aid', 'user': 'Guy Moses', 'description': 'Kitchen aid lets you mix stuff in the kitchen, its quite good.', 'percent': '70', 'price': '150$', 'date': '5 days to go'}
-                      ];
-    Product.searchByCategory('veg')
-      .success(function(data){
-        $log.debug(data);
-      });
-
-    this.fruitItems = [
-                        {'title': 'Or Oranges', 'user': 'Guy Moses', 'description': 'The best kind of oranges ever made.', 'percent': '68', 'price': '2$', 'date': '2 days to go'},
-                        {'title': 'Kitchen aid', 'user': 'Guy Moses', 'description': 'Kitchen aid lets you mix stuff in the kitchen, its quite good.', 'percent': '70', 'price': '150$', 'date': '5 days to go'},
-                        {'title': 'Kitchen aid', 'user': 'Guy Moses', 'description': 'Kitchen aid lets you mix stuff in the kitchen, its quite good.', 'percent': '70', 'price': '150$', 'date': '5 days to go'},
-                        {'title': 'Kitchen aid', 'user': 'Guy Moses', 'description': 'Kitchen aid lets you mix stuff in the kitchen, its quite good.', 'percent': '70', 'price': '150$', 'date': '5 days to go'}
-                      ];
+    this.fruitItems = [];
     Product.searchByCategory('fruit')
       .success(function(data){
         $log.debug(data);
+        $scope.fruitItems = data.data;
       });
 
-    this.GoTo = function(destination){
-      $location.path(destination);
+      this.nearItems = [];
+      Product.searchByCategory('near')
+        .success(function(data){
+          $log.debug(data);
+          $scope.fruitItems = data.data;
+        });
+
+    this.GoTo = function(destination,id){
+      $location.path(destination+id);
     }
 
     this.doSomething = function() {
