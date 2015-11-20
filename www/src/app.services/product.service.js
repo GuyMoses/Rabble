@@ -1,14 +1,14 @@
 (function() {
 
   function Product(http, Backand, MainService, Auth) {
-    this.findByGeo = function(lat, lon, id) {
+    this.findByGeo = function(distance, userId) {
       return http({
         method: 'GET',
         url: Backand.getApiUrl() + "/1/query/data/distance",
         params: {
           parameters: {
-            distance:50,
-            userId:4
+            distance: distance,
+            userId: userId
           }
         }
       })
@@ -38,9 +38,9 @@
     this.updateGeo = function(lat, lon, id) {
       return $http ({
                       method: 'PUT',
-                      url: Backand.getApiUrl() + '/1/objects/users/' + id,
+                      url: Backand.getApiUrl() + '/1/objects/products/' + id,
                       params: {
-                        name: 'Update Geo For User',
+                        name: 'Update Data In Product',
                         parameters: {
                           lat: lat,
                           lon: lon
