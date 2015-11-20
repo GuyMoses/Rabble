@@ -4,7 +4,7 @@
     this.createSupport = function(userId, productId) {
       return http({
                 method: "POST",
-                url: Backand.getApiUrl() + '1/objects/supports'
+                url: Backand.getApiUrl() + '1/objects/supports',
                 data: {
                   user: userId,
                   product: productId
