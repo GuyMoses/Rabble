@@ -6,6 +6,8 @@
         method: 'GET',
         url: Backand.getApiUrl() + "/1/query/data/distance",
         params: {
+          deep: true,
+          relatedObjects: true,
           parameters: {
             distance: distance,
             userId: userId
@@ -27,6 +29,8 @@
         method: 'GET',
         url: Backand.getApiUrl() + '/1/objects/products',
         params: {
+          deep: true,
+          relatedObjects: true,
           "filter": [{
                 "fieldName": "category",
                 "operator": "equals",
